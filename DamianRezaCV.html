@@ -1,11 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Damián Reza Ortíz</title>
+    <title>CV - Damián Reza Ortíz</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 25px;
+            margin-bottom: 35px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8em;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            font-size: 1.1em;
+            color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info span::after {
+            content: "•";
+            margin-left: 15px;
+            color: var(--accent-color);
+        }
+
+        .contact-info span:last-child::after {
+            content: "";
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* Education Styles */
+        .edu-item {
+            margin-bottom: 20px;
+        }
+
+        .edu-item strong {
+            display: block;
+            font-size: 1.15em;
+            color: var(--primary-color);
+        }
+
+        .edu-item span {
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+
+        /* Lists Styles */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .aptitudes-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .cert-list li {
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            .contact-info span::after {
+                display: none;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="cv-container">
+        <header>
+            <h1>[NAME]</h1> 
+            <div class="contact-info">
+                <span>[ADDRESS]</span> 
+                <span>[PHONE]</span> 
+                <span>[EMAIL]</span> 
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>Perfil Profesional</h2> 
+            <p>
+                Es un estudiante de Ingeniería en Desarrollo de Software con una sólida formación académica y una pasión por la tecnología. Con habilidades en programación, resolución de problemas y trabajo en equipo, busca oportunidades para aplicar sus conocimientos y crecer profesionalmente en el campo del desarrollo de software.
+            </p>
+        </section>
+        <section class="section">
+            <h2>Educación</h2> 
+            <div class="edu-item">
+                <strong>[CURRENT CARREER STAGE]</strong> 
+                <span>[HOST & PLACE]</span> 
+            </div>
+            <!-- Add more education items as needed -->
+        </section>
+
+        <section class="section">
+            <h2>Certificados</h2> 
+            <ul class="cert-list">
+                <li><a href="#">[CERTIFICATE NAME]</a> ([SOURCE])</li> 
+                <!-- Add more certificates as needed -->
+            </ul>
+        </section>
+
+        <div class="grid-container">
+            <section class="section">
+                <h2>Aptitudes</h2> 
+                <ul class="aptitudes-list">
+                    <li>Python</li> 
+                    <li>C++</li> 
+                    <li>Html....</li>
+                    <!-- Add more skills as needed -->
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Lenguajes</h2> 
+                <ul>
+                    <li>Inglés - Nativo</li> 
+                    <li>Español - Nativo</li> 
+                    <li>Alemán - Básico</li> 
+                    <!-- Add more languages as needed -->
+                </ul>
+                </ul>
+            </section>
+        </div>
+    </div>
+
 </body>
 </html>
